@@ -13,8 +13,10 @@ bool playAgain()
 
 	while (true)
 	{
-		std::cout << "Would you like to play again (y/n)? ";
+		std::cout << "\nWould you like to play again (y/n)? ";
 		std::cin >> choice;
+
+		std::cout << '\n';
 
 		std::cin.ignore(32767, '\n');
 
@@ -29,9 +31,9 @@ bool playAgain()
 bool printResult(int random, int guess)
 {
 	if (random > guess)
-		std::cout << "Your guess is too low.\n";
+		std::cout << "Your guess is too low.\n\n";
 	if (random < guess)
-		std::cout << "Your guess is too high.\n";
+		std::cout << "Your guess is too high.\n\n";
 	if (random == guess)
 	{
 		return true;
@@ -99,7 +101,7 @@ int main()
 		bool checker;
 
 		//title
-		std::cout << "Lets play a game. I'm thinking of a number. You have 7 tries to guess what it is.\n";
+		std::cout << "Lets play a game. I'm thinking of a number. You have 7 tries to guess what it is.\n\n";
 
 		checker = checkAndPrintRandomNumber(randomNumber);
 
